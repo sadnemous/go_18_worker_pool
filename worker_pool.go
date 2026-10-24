@@ -60,6 +60,7 @@ func (wp *WorkerPool) Run() {
 
 	// Start workers
 	for i := 0; i < wp.concurrency; i++ {
+		fmt.Printf("\n====loop %d \n", i)
 		go wp.worker()
 	}
 
